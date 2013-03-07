@@ -1,0 +1,505 @@
+/* hyszczak.net - TransPanel CSS
+ * Egon Hyszczak 5/1/2010
+ */
+
+html {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-image: url(../images/bg.jpg);
+    font-family:"Bitstream Vera Sans", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial, sans-serif;
+    font-size:10px;
+    color:white;
+}
+
+img {
+    border:0;
+}
+
+#container {
+    height: 2400px;
+    width: 5760px;
+    /*
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    */
+}
+
+
+/** PAGE POSITIONING **/
+
+.positioning {
+    position: absolute;
+    width: 1920px;
+    height: 1200px;
+    xbackground:transparent url(../images/shader.png) repeat 0 0;
+}
+
+.stripe_h {
+    height:18px;
+    width:100%;
+}
+.stripe_v {
+    width:111px;
+    height:187px;
+    -moz-border-radius:4px;
+    margin:2px;
+    float:left;
+    position:absolute;
+    top:8px;
+    left:8px;
+    filter:alpha(opacity=60);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+}
+#start {
+    top:0px;
+    left:0px;
+    background-repeat:no-repeat;
+    background-position:bottom right;
+}
+#start .stripe {
+    background:#61e353 url(../images/shader.png) repeat 0 0;
+}
+
+#about {
+    top:1200px;
+    left:0px;
+}
+#about .stripe {
+    background-color:#374245;
+    background:#9bf534 url(../images/man.png) repeat;
+}
+
+#work {
+    top:1200px;
+    left:1920px;
+}
+#work .stripe {
+    background:#ffd17a url(../images/bg_purple.gif) repeat;
+}
+	
+#contact {
+    top:0px;
+    left:1920px;
+}
+#contact .stripe {
+    background:#fffef1 url(../images/down_arrow.png) repeat;
+}
+	
+#print {
+    top:0px;
+    left:3840px;
+}
+#print .stripe {
+    background:#284907 url(../images/tree.png) repeat;
+}
+	
+#skills {
+    top:1200px;
+    left:3840px;
+}
+#skills .stripe {
+    background:#a0e1ff url(../images/island.png) repeat;
+}
+
+.inside {
+    margin-left:174px;
+    margin-top:16px;
+    width:60%;
+    height:100%;
+    overflow:hidden;
+}
+	
+.inside h1 {
+    font-family:"Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial;
+    font-size:16px;
+    font-weight:normal;
+    color:#FFF;
+    padding-bottom:10px;
+    line-height:25px;
+    text-shadow:1px 1px 2px #000;
+}
+
+.inside h2 {
+    font-family:"Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial;
+    font-size:12px;
+    font-weight:normal;
+    color:#FFF;
+    padding-bottom:0px;
+    line-height:25px;
+    text-shadow:1px 1px 2px #000;
+}
+
+.inside p {
+    font-family:"Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial;
+    font-size:12px;
+    color:#FFF;
+    text-align:justify;
+    line-height:23px;
+    padding-bottom:10px;
+    text-shadow:0px 0px 3px #000;
+}
+	
+/** list for skill page **/
+.inside ul#skill_list li {
+    margin:0;
+    padding:0;
+    list-style:none outside none;
+    font-size:12px;
+    display:block;
+    padding:2px 10px;
+    border-bottom:1px solid #ccc;
+}
+.inside ul#skill_list li ul {
+    margin:0;
+    padding:0px 0px 0px 12px;
+    font-size:12px;
+    display:none;
+}
+.inside ul#skill_list li ul li {
+    background:transparent;
+    border-bottom:none;
+    list-style:disc inside none;
+    display:list-item;
+    text-shadow:0px 0px 0px transparent;
+}
+.inside ul#skill_list li ul li:hover {
+    background-color:#fff;
+    color: #000;
+    list-style:circle inside none;
+    text-shadow:0px 0px 0px transparent;
+}
+.inside ul#work_list li {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    font-size:12px;
+    display:block;
+    padding:2px 10px;
+    border-bottom:1px solid#ccc;
+    width:auto;
+}
+
+.inside ul#skill_list li:hover, ul#work_list li:hover {
+    background-color:#fff;
+    color: #000;
+    cursor:crosshair;
+    text-shadow:0px 0px 0px transparent;
+}
+
+.content {
+  width:90%;
+  height:90%;
+  border:0px solid red;
+  overflow:hidden;
+  padding:0px;
+  padding-right:24px;
+  margin:0px;
+}
+
+.warning {
+    background-color:#880000;
+    line-height:normal;
+    padding:15px;
+}
+
+
+/** MOOTOOLS **/
+
+.navigator {
+    float: left;
+    cursor: pointer;
+    display: block;
+    clear: both;
+    color:white;
+}
+
+.button {
+    float: left;
+    cursor: pointer;
+    margin-right: 2px;
+}
+
+.slider {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial;
+    font-size:12px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #FFF;
+    padding: 10px;
+}
+
+.slider img {
+    border: 5px solid #FFF;
+}
+
+/** LINKS **/
+a:link, a:visited {
+    outline:none;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #000;
+    padding: 1px 2px;
+}
+	
+a:hover, a:active {
+    outline:none;
+    color:lawnGreen;
+    text-decoration:none;
+    background-color:#000;
+    padding:1px 2px;
+}
+.gradient {
+    width:300px;
+    position:relative;
+    left:169px;
+}
+
+.gradient h1 {
+    position:relative;
+    color:white;
+}
+.gradient h1 span {
+    xbackground:transparent url(../images/gradient-dark-stripe-hz.png) repeat-x;
+    xbackground:transparent url(../images/gradient-a0e1ff.png) repeat-x;
+    position: absolute;
+    bottom: 0em;
+    display: block;
+    width: 100%;
+    height: 29px;
+}
+input[name='status'] {
+    opacity:0.6;
+    border:1px solid white;
+}
+textarea[name='status_area'] {
+    opacity:0.6;
+    border:1px solid white;
+    display:none;
+}
+div#debug {
+   position:fixed;
+   top:24px;
+   right:18px;
+   z-index:1000;
+   display:none;
+}
+div#current_position {
+    position:fixed;
+    top:2px;
+    right:2px;
+    z-index:1000;
+    display:none;
+}
+input#toggle_debug {
+    float:right;
+    margin:2px;
+}
+div#menu {
+    -moz-border-radius:4px;
+    position:absolute;
+    top:8px;
+    left:8px;
+    width:86px;
+    height:162px;
+    border:3px double #a0e1ff;
+    padding:12px;
+    text-align:center;
+    z-index:1000;
+}
+div#menu input {
+    width:84px;
+    margin:2px 0;
+    font-size:12px;
+}
+div#logos {
+    float:right;
+    position:fixed;
+    bottom:5px;
+    right:5px;
+    z-index:1000;
+    background:transparent;
+}
+div#logos a {
+    background:transparent;
+}
+div#copyright {
+    float:left;
+    position:fixed;
+    bottom:5px;
+    left:5px;
+    z-index:1000;
+    background:transparent;
+}
+
+div#copyright p {
+    padding:0px;
+    margin:0px;
+    text-shadow:1px 1px 2px #000;
+}
+
+div#top-right {
+    float:right;
+    position:fixed;
+    top:0px;
+    right:5px;
+    z-index:1000;
+    background:transparent;
+    text-shadow:1px 1px 2px #000;
+}
+
+div#top-right ul li {
+    display:inline;
+}
+
+div#parallax {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:2048px;
+    height:1280px;
+    /*background: transparent url(../images/landscape.jpg) no-repeat 0 0;*/
+    background: transparent url(../images/landscape2.jpg) no-repeat 0 0;
+    z-index:100;
+    opacity:0.6;
+    display:none;
+}
+div#about-scroller, div#animation-scroller, div#skills-scroller {
+    background:transparent;
+    width:80px;
+    height:80%;
+    position:relative;
+    top:20%;
+    right:20%;
+    float:right;
+}
+div#about-scroller div.scroll-up, div#animation-scroller div.scroll-up, div#skills-scroller div.scroll-up {
+    position:relative;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+    height:30px;
+    text-align:center;
+    opacity:1.0;
+}
+div#about-scroller div.scroll-down, div#animation-scroller div.scroll-down, div#skills-scroller div.scroll-down {
+    position:relative;
+    top:200px;
+    left:0px;
+    cursor:pointer;
+    height:30px;
+    text-align:center;
+    opacity:1.0;
+}
+
+ul li {
+    text-shadow:0px 0px 3px #000;
+    font-size:11px;
+}
+
+.italic {
+    font-style:italic;
+}
+
+a {
+    outline:none;
+}
+
+input {
+    outline:none;
+}
+
+#contact_form label {
+    vertical-align:top;
+    position:relative;
+    top:3px;
+    width:55px;
+    display:inline-block;
+    text-align:left;
+    text-shadow:1px 1px 2px #000;
+}
+
+#contact_form input[type="text"], #contact_form select#reason, #contact_form textarea {
+    background:transparent url(../images/trans40.png) repeat top left;
+    border:2px outset #444;
+    margin-bottom:4px;
+    padding:4px;
+}
+
+#contact_form textarea {
+    font-family:"Bitstream Vera Sans", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial, sans-serif;
+    font-size:14px;
+    line-height:1.2em;
+    width:408px;
+}
+
+#contact_form select#reason option {
+    background:white;
+}
+
+#contact_form select#reason {
+    padding:0px;
+    border:2px outset #444;
+}
+
+#contact_form input#submit {
+    position:relative;
+    left:224px;
+}
+
+#contact_form input[type="text"]:focus, #contact_form select#reason:focus, #contact_form textarea:focus {
+    background:transparent url(../images/trans80.png) repeat top left;
+    border:2px inset yellow;
+}
+
+#contact_form button#submit {
+    position:relative;
+    left:414px;
+}
+
+div#elance {
+  float:right;
+}
+
+div#birds {
+  float:left;
+  display:none;
+}
+
+div#contact_block {
+  border:0px solid red;
+  width:496px;
+}
+
+.ui-effects-transfer {
+  border:1px dotted #eee;
+}
+
+div.delicious-networkbadge {
+  float:right;
+}
+
+span#human {
+  visibility:hidden;
+  float:left;
+}
+
+img.toggle {
+  position:relative;
+  left:-8px;
+  float:left;
+  clear:none;
+}
+
+img.toggle:hover {
+  cursor:pointer;
+}

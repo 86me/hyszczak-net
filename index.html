@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Egon Hyszczak ~ The Life and Times</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="css/black-tie/jquery-ui-1.8.16.custom.css">
+        <link rel="stylesheet" type="text/css" href="css/validationEngine.jquery.css">
+        <link rel="stylesheet" type="text/css" href="css/base.css">
+        <link rel="shortcut icon" type="image/x-icon" href="http://www.hyszczak.net/favicon.ico">
+
+        <!-- Javascripts -->
+        <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.validationEngine-en.js"></script>
+        <script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollto-min.js"></script>
+        <script type="text/javascript" src="js/Tween.js"></script>
+        <script type="text/javascript" src="js/Parallel.js"></script>
+    </head>
+    <body>
+        <!--<div id="birds"><img src="images/birds-test.png" /></div>-->
+        <div id="debug">
+            <input id="toggle_debug" value="toggle debug window" type="button">
+            <br>
+            <textarea id="status_area" rows="12" cols="45" name="status_area"></textarea>
+        </div>
+
+        <div id="current_position">
+            <input name="status" id="status" size="28" value="leet status" type="text">
+        </div>
+        <div id="top-right">
+          <p>Having difficulty reading text on this background?
+            <ul id="bg-select">
+              <li><a href="/" id="bg-alt">Alternate</a></li>
+              <li><a href="/" id="bg-orig">Original</a></li>
+              <li><a href="/" id="bg-pat">Pattern</a></li>
+              <li><a href="/" id="bg-none">None</a></li>
+            </ul>
+          </p>
+        </div>
+
+        <div id="menu">
+            <input value="home" class="goto_start" type="button">
+            <input value="about" class="goto_about" type="button">
+            <input value="contact" class="goto_contact" type="button">
+            <!--<input type="button" value="print" class="goto_print" />-->
+            <input value="skills" class="goto_skills" type="button">
+            <input value="work" class="goto_work" type="button">
+        </div>
+        <div id="copyright">
+          <p>&copy; Copyright Egon Hyszczak &bull; MMIX</p>
+        </div>
+        <div id="logos">
+            <a href="http://validator.w3.org/check?uri=referer"><img src="images/w3c_html.png" alt="Valid HTML5"></a>
+            <a href="http://www.w3.org/Style/CSS/learning" title="Learn more about Cascading Style Sheets"><img src="images/w3c_css.png" alt="Made With CSS"></a>
+            <a href="https://www.ohloh.net/accounts/27624?ref=Tiny" target="_top">
+            <img alt="Ohloh profile for eightysixme" border="0" height="12" src="https://www.ohloh.net/accounts/27624/widgets/account_tiny.gif" />
+            </a>
+        </div>
+
+        <div id="parallax"></div>
+        <!-- Begin Container -->
+        <div id="container" style="position: relative; left: 0px; z-index: 100;">
+
+            <!-- START -->
+            <div id="start" class="positioning">
+                <div class="stripe stripe_v"></div>
+                <div class="inside">
+                    <img src="images/hyszczak-dot-net.png" alt="Welcome to hyszczak.net">
+                    <p>Within this wall you will find links to projects I am 
+        currently working on. A collection of work brought together in one, 
+        difficult to spell location.</p>
+                    <p>I have been tweaking the javascript code that powers this site. I recently made it a bit more object oriented by using <code>this.functionName = function() {};</code> inside a "TransPanel" object.</p>
+                    <p>The source is encrypted due to its leetness, however, I will be releasing it to the public under an <a href="http://en.wikipedia.org/wiki/MIT_License">MIT license</a>. I would like to release it with a few more features and a HOWTO of sorts. I am interested in expanding the <a href="http://en.wikipedia.org/wiki/Parallax">parallax</a> capability, bringing together three or more layers moving at different rates.</p>
+                    <p>You can also navigate to pages using "Ctrl+[1-5]".</p>
+                </div>
+            </div>
+
+            <!-- ABOUT -->
+            <div id="about" class="positioning">
+                <div class="stripe stripe_v"></div>
+                <div id="about-scroller">
+                    <div class="scroll-up"><img src="images/arrow-up.png" width="24"></div>
+                    <div class="scroll-down"><img src="images/arrow-down.png" width="24"></div>
+                </div>
+                <div class="inside">
+                    <h1>About</h1>
+                    <div class="content">
+                        <!--<script type="text/javascript" src="http://feeds.delicious.com/v2/js/networkbadge/eg0n?showadd&icon=s&name&itemcount&nwcount"></script>-->
+                        <p>My name is <span class="italic">Egon Hyszczak</span>.</p>
+                        <p>I am a lover. I am a fighter. I am a programmer. I am a web developer. I am a hardcore *nix ninja.</p>
+                        <p>I specialize in Linux and BSD server/client development. Fluent in many different programming languages and Linux distributions.</p>
+                        <ul class="sub-list">
+                            <li>Java</li>
+                            <li>Lisp</li>
+                            <li>PHP</li>
+                            <li>Python</li>
+                        </ul>
+                        <p>Unices that I am fluent in:</p>
+                        <ul class="sub-list">
+                            <li>Arch, Debian, Gentoo, Redhat, &amp; Slackware Linux</li>
+                            <li>FreeBSD &amp; OpenBSD</li>
+                        </ul>
+                        <p>I include things like programming languages and operating
+             systems in the about section because they are a major hobby and passion
+             of mine. I am a tech-head — a "geek" if you will. I love knowing the 
+            ins and outs of technical systems. If I don't know how something works, I
+             figure it out. My logic and problem solving skills have come from <span class="ital bold">countless</span> hours of pushing my knowledge and understanding further, where many others have promptly given up.</p>
+                        <p>I love old adventure games.</p>
+                        <ul class="sub-list">
+                            <li>Monkey Island</li>
+                            <li>Kings Quest 5-6</li>
+                            <li>Quest of the Longbow</li>
+                            <li>Dagger of Amon Ra</li>
+                            <li>Quest for Glory 4</li>
+                            <li>Police Quest 4</li>
+                            <li>Return to Zork et. al.</li>
+                            <li>Diablo 1 &amp; 2</li>
+                        </ul>
+                        <p>The old school first person shooters:</p>
+                        <ul>
+                            <li>Doom</li>
+                            <li>Doom 2</li>
+                            <li>Duke Nukem 3D (Build Engine)</li>
+                            <li>Team Fortress (HPB Sniper)</li>
+                            <li>Quake 1 2 3</li>
+                            <li>Counterstrike (Beta 1-6)</li>
+                        </ul>
+                        <p>Arcade games of the vertical scrolling variety</p>
+                        <ul>
+                            <li>Raiden</li>
+                            <li>Aero Fighters</li>
+                            <li>Super Star Soldier</li>
+                        </ul>
+                        <p>I also love SNK in general, especially the artwork of titles like King of Fighters, Samurai Shodown, and Metal Slug.</p>
+                        <p>Been really digging Resident Evil 5 for Xbox in co-op 
+            mode on my friend Matt's six foot projector. We recently finished Army 
+            of Two. If only I had been a beta tester. AoT had a lot going for it, 
+            but there were some bugs that I am convinced kept it from wider 
+            acceptance.</p>
+                        <p>Computer games were what got me interested and on my way 
+            to hacking the planet. It is also where I would like to end up; an old 
+            fogie game developer.</p>
+                        <p>Text editor of choice: vim</p>
+                        <p>Operating system of choice: Gentoo Linux</p>
+                        <p>Fishing — Fly</p>
+                        <p>Balling — Bocce</p>
+                        <p>Boarding — Skate/Snow</p>
+                        <p>Hiking, Camping, Eating, Dreaming.</p>
+                        <div class="navigator">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- WORK -->
+            <div id="work" class="positioning">
+                <div class="stripe stripe_v"></div>
+                <!--
+                <div id="about-scroller"> 
+                    <div class="scroll-up"><img src="images/upArrow.gif" width="24"/></div> 
+                    <div class="scroll-down"><img src="images/downArrow.gif" width="24"/></div> 
+                </div> 
+                -->
+                <div class="inside">
+                    <h1>Work</h1>
+                    <p>A list of completed projects:</p>
+                        <ul id="work_list">
+                            <li><a href="http://2dogrc.com/" target="_blank">2 Dog's RC Warehouse</a> &mdash; Conversion from osCommerce to highly customized Drupal eCommerce system.</li>
+                            <!--<li><a href="http://itunes.30atelevision.com/" target="_blank">30ATelevision</a> &mdash; Python powered video streaming application for iPhone and other mobile devices.</li>-->
+                            <li><a href="http://flyairhobbyrc.com/" target="_blank">Fly Air Hobby RC</a> &mdash; osCommerce → Drupal/Ubercart conversion.</li>
+                            <li><a href="http://ageofentanglement.com/" target="_blank">The Age of Entanglement</a> &mdash; When Quantum Physics was Reborn. Wordpress.</li>
+                            <li><a href="http://amgdata.com/" target="_blank">AMG Data Services</a> &mdash; Ajax tabbed browsing interface. Company recently acquired by Thomson Reuters.</li>
+                            <!--<li><a href="http://ch.emi.st/">ch.emi.st</a> &mdash; Bocce, Disc Golf, and Kickball forums. Organic groups. Drupal 5.</li>-->
+                            <li><a href="http://iculpa.com/" target="_blank">iCulpa.com</a> &mdash; Apologize anonymously online. Drupal powered.</li>
+                            <li><a href="http://in-deal.net/" target="_blank">InDeal</a> &mdash; Daily deals site. Orlado, FL based tech startup. Chief Technical Officer. Drupal powered.</li>
+                            <!--<li><a href="http://jeepwave.me/">Jeepwave.me</a> &mdash; Jeep enthusiast site. Custom image generation code. Drupal powered.</li>-->
+                            <li><a href="http://lovespursesandshoes.com" target="_blank">Loves Purses and Shoes</a> &mdash; High fashion eCommerce site. Opencart Powered.</li>
+                            <!--<li><a href="http://mediageeks.com/">Media Geeks</a> &mdash; Splash page and JQuery UI subscription interface.</li>-->
+                            <li><a href="http://phuconcepts.com/portfolio.php" target="_blank">Phuconcepts.com</a> &mdash; Flash Portfolio.</li>
+                            <!--<li><a href="http://royalmedia.com/">Royal Media</a> &mdash; CMS Made Simple Site Conversion.</li>-->
+                            <!--<li><a href="http://sinister.org/">Sinister.org</a> &mdash; Personal site since '99.</li>-->
+                            <li><a href="http://www.targetrentacar.com/newSite/" target="_blank">Target Rent-a-Car</a> &mdash; Custom PHP/Curl XML API reservation system.</li>
+                            <!--<li><a href="http://the.ori.st/">the.ori.st</a> &mdash; Personal site. Delicious tag cloud.</li>-->
+                            <li><a href="http://library.rochester.edu/databases" target="_blank">University of Rochester Library</a> &mdash; Resources Application. Coldfusion → Drupal conversion.</li>
+                        </ul>
+                    <div class="navigator">
+                    </div>
+                </div>	
+            </div>
+            
+            <!-- CONTACT -->
+            <div id="contact" class="positioning">
+                <div class="stripe stripe_v"></div>
+                <div class="inside">
+                    <h1>Contact</h1> 
+                    <h2>I'd love to hear from you!</h2>
+                    <form id="contact_form" name="contact_form" method="post" action="/">
+                    <div id="contact_block">
+                        <div>
+                            <label for="email_address">Email:</label>
+                            <input id="email_address" style="width: 240px;" name="email_address" type="text" class="validate[required,custom[email]]">
+                        </div>
+                        <div>
+                            <label for="from_name">Name:</label>
+                            <input id="from_name" style="width: 240px;" name="from_name" type="text" class="validate[required,custom[onlyLetterSp]]">
+                        </div>
+                        <div>
+                            <label for="reason">Reason:</label>
+                            <select name="reason" id="reason" class="validate[required]">
+                                <option value="" selected="selected">Select a Category</option>
+                                <option value="consulting">Consultation</option>
+                                <option value="development">Web Development</option>
+                                <option value="graphic_design">Graphic Design</option>
+                                <option value="print">Print (Digital/Offset)</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="6" cols="44" class="validate[required,minSize[8]]"></textarea>
+                        </div>
+                        <span id="human"><input type="text" id="human" name="human" value="" /></span>
+                        </div>
+                        <br>
+                        <input id="submit" name="submit" type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
+
+            <!-- PRINT -->
+            <!--<div id="print" class="positioning">
+                <div class="stripe stripe_v"></div>
+                <h1>Print Work</h1>
+                <div class="inside">
+                    <p>some kinda accordian here, maybe horizontal, maybe lightbox. WTFK</p>
+                    <div class="navigator">
+                    </div>
+                </div>
+            </div>-->
+
+            <!-- SKILLS -->
+            <div id="skills" class="positioning">
+                <div class="stripe stripe_v"></div>
+                <div class="inside">
+                    <h1>Skills</h1>
+                <div id="elance">
+                <object width="160" height="405"><param name="movie" value="http://images.elance.com/media/flash/widget/profile/profile-widget-160.swf?userId=2502907&catId=&defaultTab=1&rid=1PFCF"></param><param name="allowFullScreen" value="false"></param><param name="allowscriptaccess" value="always"></param><embed src="http://images.elance.com/media/flash/widget/profile/profile-widget-160.swf?userId=2502907&catId=&defaultTab=1&rid=1PFCF" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="160" height="405"></embed></object>
+                </div>
+                    <p>Some of my specialties:</p>
+
+                        <ul id="skill_list">
+                            <li><img src="images/ico_plus.png" class="toggle" />Open Source Software Aficionado [Linux 3.0.4-gentoo #1 SMP PREEMPT AuthenticAMD GNU/Linux]
+                              <ul>
+                                <li>Active in the community</li>
+                                <li>Know how to re/compile the kernel</li>
+                                <li>Use Xorg on all of my workstations</li>
+                                <li>Provide help in forums</li>
+                                <li>Submit patches &amp; bugfixes (Gnome, Gentoo, Gun.io, Dwarf Fortress, StumpWM)</li>
+                                <li>Maintain <a href="https://github.com/86me">github</a> and <a href="https://www.ohloh.net/accounts/eightysixme">ohloh</a> accounts</li>
+                              </ul>
+                            </li>
+
+                            <li><img src="images/ico_plus.png" class="toggle" />Advanced knowledge in Berkeley Software Distribution &amp; Linux Operating Systems
+                              <ul>
+                                <li>Arch</li>
+                                <li>Debian/Ubuntu</li>
+                                <li>Gentoo</li>
+                                <li>Redhat/CentOS</li>
+                                <li>FreeBSD</li>
+                                <li>OpenBSD</li>
+                                <li>OSX</li>
+                                <li>Plan9/9front (Pet project)</li>
+                              </ul>
+                            </li>
+                            <li><img src="images/ico_plus.png" class="toggle" />Programming language agnostic (alphabetical)
+                              <ul>
+                                <li>Actionscript</li>
+                                <li>C</li>
+                                <li>C++</li>
+                                <li>Java</li>
+                                <li>Javascript</li>
+                                <li>Lisp</li>
+                                <li>Perl</li>
+                                <li>PHP</li>
+                                <li>Python</li>
+                                <li>SQL</li>
+                              </ul>
+                            </li>
+                            <li>Shell scripting [#!]: sh, bash, zsh, sed, grep, awk, regular expressions</li>
+                            <li><img src="images/ico_plus.png" class="toggle" />Working knowledge of web application frameworks and content management systems
+                              <ul>
+                                <li>Django</li>
+                                <li>Dojo</li>
+                                <li>Drupal</li>
+                                <li>Opencart</li>
+                                <li>Pylons</li>
+                                <li>Turbogears</li>
+                                <li>Twisted</li>
+                                <li>Wordpress</li>
+                              </ul>
+                            </li>
+                            <li>Familiarity with Google's App Engine and Eclipse Python (Pydev) development</li>
+                            <li>XML API data interation via curl</li>
+                            <li>XSLT (rare, but aware)</li>
+                            <li>JSON Ajax push/pull</li>
+                            <li>Experience integrating Delicious, Facebook, and Twitter OAuth APIs in multiple languages</li>
+                            <li>Comfortable working with existing code-bases</li>
+                            <li><img src="images/ico_plus.png" class="toggle" />Use a custom trac/git setup for all in-house software projects
+                              <ul>
+                                <li>Familiar with most popular revision control software (cvs, git, svn).</li>
+                                <li>Have yet to use Mercurial (hg) on any projects</li>
+                              </ul>
+                            </li>
+                            <li>Know the difference between doctypes (html4-strict/transitional, xhtml, html5) and character encoding (iso-8859-1, utf-8)</li>
+                            <li><a href="http://graffitiresearchlab.com/" target="_blank">Cultivated</a> <a href="http://flight404.com/" target="_blank">Design</a> <a href="http://mrdoob.com/" target="_blank">Sense</a></li>
+                            <li><img src="images/ico_plus.png" class="toggle" />Proficient in Adobe Creative Suite
+                              <ul>
+                                <li>After Effects</li>
+                                <li>Flash</li>
+                                <li>Illustrator</li>
+                                <li>Photoshop</li>
+                                <li>InDesign</li>
+                              </ul>    
+                            </li>
+                        </ul>
+                    <div class="navigator">
+                    </div>
+                </div>	
+            </div>
+        </div><!-- END CONTAINER -->
+
+        <script type="text/javascript" src="js/leet.obf"></script>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              /*
+              $('ul#skill_list li').mouseenter(function() {
+                $(this).children("ul").slideDown('slow');
+              }).mouseleave(function() {
+                $(this).children("ul").slideUp('slow');
+              });
+              */
+
+            /*
+            $('ul#skill_list').accordion({
+                event:"mouseover"
+            });
+            */
+          });
+        </script>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-5509314-7']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </body>
+</html>
+

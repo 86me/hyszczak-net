@@ -1,0 +1,281 @@
+/*
+Copyright (c) 2009 Egon Hyszczak [egon_at_hyszczak_dot_net]
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+*/
+var _0x53b6=["\x67\x65\x74","\x23\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72","\x23\x70\x61\x72\x61\x6C\x6C\x61\x78","\x73\x74\x72\x6F\x6E\x67\x45\x61\x73\x65\x49\x6E\x4F\x75\x74","","\x67\x65\x74\x50\x6F\x73","\x6F\x66\x66\x73\x65\x74\x4C\x65\x66\x74","\x6F\x66\x66\x73\x65\x74\x54\x6F\x70","\x67\x6F\x74\x6F\x50\x61\x67\x65","\x64\x69\x73\x70\x6C\x61\x79","\x63\x73\x73","\x6E\x6F\x6E\x65","\x66\x61\x64\x65\x49\x6E","\x61\x62\x73","\x68","\x73\x74\x79\x6C\x65","\x6C\x65\x66\x74","\x70\x78","\x61\x64\x64\x43\x68\x69\x6C\x64","\x0A\x67\x6F\x74\x6F\x3A\x20\x6D\x6F\x76\x69\x6E\x67\x20\x68\x6F\x72\x69\x7A\x6F\x6E\x74\x61\x6C\x6C\x79\x20\x5B\x63\x58\x2F\x66\x58\x5D\x3A\x20","\x2F","\x76","\x74\x6F\x70","\x0A\x67\x6F\x74\x6F\x3A\x20\x6D\x6F\x76\x69\x6E\x67\x20\x76\x65\x72\x74\x69\x63\x61\x6C\x6C\x79\x20\x5B\x63\x59\x2F\x66\x59\x5D\x3A\x20","\x68\x79\x73\x7A\x63\x7A\x61\x6B\x2E\x6E\x65\x74","\x63\x72\x65\x61\x74\x65\x43\x6F\x6F\x6B\x69\x65","\x68\x61\x73\x68","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x23","\x23\x21","\x72\x65\x70\x6C\x61\x63\x65","\x6F\x6E\x4D\x6F\x74\x69\x6F\x6E\x46\x69\x6E\x69\x73\x68\x65\x64","\x6F\x6E\x4D\x6F\x74\x69\x6F\x6E\x53\x74\x61\x72\x74\x65\x64","\x73\x74\x61\x72\x74","\x73\x65\x74\x50\x61\x67\x65\x53\x69\x7A\x65\x73","\x67\x65\x74\x42\x72\x6F\x77\x73\x65\x72\x44\x69\x6D\x65\x6E\x73\x69\x6F\x6E\x73","\x4D\x53\x49\x45","\x69\x6E\x64\x65\x78\x4F\x66","\x75\x73\x65\x72\x41\x67\x65\x6E\x74","\x63\x6C\x69\x65\x6E\x74\x57\x69\x64\x74\x68","\x64\x6F\x63\x75\x6D\x65\x6E\x74\x45\x6C\x65\x6D\x65\x6E\x74","\x63\x6C\x69\x65\x6E\x74\x48\x65\x69\x67\x68\x74","\x69\x6E\x6E\x65\x72\x57\x69\x64\x74\x68","\x69\x6E\x6E\x65\x72\x48\x65\x69\x67\x68\x74","\x67\x65\x74\x42\x72\x6F\x77\x73\x65\x72\x44\x69\x6D\x65\x6E\x73\x69\x6F\x6E\x73\x3A\x20\x5B\x77\x2F\x68\x5D\x20","\x0A","\x23\x73\x74\x61\x72\x74","\x23\x63\x6F\x6E\x74\x61\x63\x74","\x23\x70\x72\x69\x6E\x74","\x23\x73\x6B\x69\x6C\x6C\x73","\x23\x61\x62\x6F\x75\x74","\x23\x77\x6F\x72\x6B","\x23\x65\x78\x74\x72\x61","\x68\x65\x69\x67\x68\x74","\x77\x69\x64\x74\x68","\x65\x61\x63\x68","\x21","\x72\x65\x61\x64\x43\x6F\x6F\x6B\x69\x65","\x73\x65\x74\x20\x68\x65\x69\x67\x68\x74\x20\x6F\x66\x20\x70\x61\x67\x65\x20\x65\x6C\x65\x6D\x65\x6E\x74\x73\x20\x74\x6F\x3A\x20","\x64\x65\x62\x75\x67","\x4D\x69\x63\x72\x6F\x73\x6F\x66\x74","\x43\x68\x72\x6F\x6D\x65","\x6C\x6F\x67","\x74\x72\x61\x63\x6B\x50\x6F\x73\x69\x74\x69\x6F\x6E","\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72\x20\x70\x6F\x73\x69\x74\x69\x6F\x6E\x3A\x20","\x76\x61\x6C","\x69\x6E\x70\x75\x74\x5B\x6E\x61\x6D\x65\x3D\x22\x73\x74\x61\x74\x75\x73\x22\x5D","\x74\x65\x78\x74\x61\x72\x65\x61\x5B\x6E\x61\x6D\x65\x3D\x22\x73\x74\x61\x74\x75\x73\x5F\x61\x72\x65\x61\x22\x5D","\x63\x61\x6C\x6C\x65\x64\x20\x74\x72\x61\x63\x6B\x50\x6F\x73\x69\x74\x69\x6F\x6E","\x67\x65\x74\x54\x69\x6D\x65","\x73\x65\x74\x54\x69\x6D\x65","\x3B\x20\x65\x78\x70\x69\x72\x65\x73\x3D","\x74\x6F\x47\x4D\x54\x53\x74\x72\x69\x6E\x67","\x63\x6F\x6F\x6B\x69\x65","\x3D","\x3B\x20\x70\x61\x74\x68\x3D\x2F","\x3B","\x73\x70\x6C\x69\x74","\x6C\x65\x6E\x67\x74\x68","\x73\x75\x62\x73\x74\x72\x69\x6E\x67","\x63\x68\x61\x72\x41\x74","\x20","\x65\x72\x61\x73\x65\x43\x6F\x6F\x6B\x69\x65"];var TransPanel=function (){var canvas=$(_0x53b6[1])[_0x53b6[0]](0);var parallax_canvas=$(_0x53b6[2])[_0x53b6[0]](0);var tweenType=Tween[_0x53b6[3]];var duration=1.0;var textarea_message=_0x53b6[4];var c= new CookieMonster();var self=this;var resizeTimeoutId;this[_0x53b6[5]]=function (obj){var curleft=0;var curtop=0;curleft+=obj[_0x53b6[6]];curtop+=obj[_0x53b6[7]];return [curleft,curtop];} ;this[_0x53b6[8]]=function (container,destination){var current_position=this[_0x53b6[5]]($(container)[_0x53b6[0]](0));var final_position=this[_0x53b6[5]]($(destination)[_0x53b6[0]](0));var current_x=current_position[0];var current_y=current_position[1];var final_x=final_position[0]*-1;var final_y=final_position[1]*-1;if($(_0x53b6[2])[_0x53b6[10]](_0x53b6[9])==_0x53b6[11]){$(_0x53b6[2])[_0x53b6[12]](3600);} ;var content_tween= new Parallel();var parallax= new Parallel();if((Math[_0x53b6[13]](current_x)-Math[_0x53b6[13]](final_x))!=0){content_tween[_0x53b6[14]]= new Tween(canvas[_0x53b6[15]],_0x53b6[16],tweenType,current_x,final_x,duration,_0x53b6[17]);content_tween[_0x53b6[18]](content_tween[_0x53b6[14]]);parallax[_0x53b6[14]]= new Tween(parallax_canvas[_0x53b6[15]],_0x53b6[16],tweenType,(current_x/16),(final_x/16),duration,_0x53b6[17]);parallax[_0x53b6[18]](parallax[_0x53b6[14]]);textarea_message+=_0x53b6[19]+current_x+_0x53b6[20]+final_x;} ;if((Math[_0x53b6[13]](current_y)-Math[_0x53b6[13]](final_y))!=0){content_tween[_0x53b6[21]]= new Tween(canvas[_0x53b6[15]],_0x53b6[22],tweenType,current_y,final_y,duration,_0x53b6[17]);content_tween[_0x53b6[18]](content_tween[_0x53b6[21]]);parallax[_0x53b6[21]]= new Tween(parallax_canvas[_0x53b6[15]],_0x53b6[22],tweenType,current_y/6,final_y/6,duration,_0x53b6[17]);parallax[_0x53b6[18]](parallax[_0x53b6[21]]);textarea_message+=_0x53b6[23]+current_y+_0x53b6[20]+final_y;} ;c[_0x53b6[25]](_0x53b6[24],destination,1);window[_0x53b6[27]][_0x53b6[26]]=destination[_0x53b6[30]](_0x53b6[28],_0x53b6[29]);if(parallax[_0x53b6[14]]!=undefined){var tween_object=parallax[_0x53b6[14]];} else {if(parallax[_0x53b6[21]]!=undefined){var tween_object=parallax[_0x53b6[21]];} ;} ;if(tween_object!=undefined){tween_object[_0x53b6[31]]=function (event){} ;tween_object[_0x53b6[32]]=function (event){} ;} ;content_tween[_0x53b6[33]]();parallax[_0x53b6[33]]();} ;this[_0x53b6[34]]=function (){this[_0x53b6[35]]=function (){var width=0;var height=0;if(navigator[_0x53b6[38]][_0x53b6[37]](_0x53b6[36])!=-1){width=document[_0x53b6[40]][_0x53b6[39]];height=document[_0x53b6[40]][_0x53b6[41]];} else {width=window[_0x53b6[42]];height=window[_0x53b6[43]];} ;textarea_message+=_0x53b6[44]+width+_0x53b6[20]+height+_0x53b6[45];return [width,height];} ;dimensions=this[_0x53b6[35]]();tPos=0;lPos=0;padding=65;columns=3;var elements=[_0x53b6[46],_0x53b6[47],_0x53b6[48],_0x53b6[49],_0x53b6[50],_0x53b6[51],_0x53b6[52]];$[_0x53b6[55]](elements,function (index,value){width=dimensions[0];height=dimensions[1];$(value)[_0x53b6[10]](_0x53b6[54],width+_0x53b6[17])[_0x53b6[10]](_0x53b6[53],height+_0x53b6[17]);$(value)[_0x53b6[10]](_0x53b6[22],tPos+_0x53b6[17])[_0x53b6[10]](_0x53b6[16],lPos+_0x53b6[17]);lPos+=width+padding;if((index+1)%columns==0){lPos=0;tPos+=height+padding;} ;} );clearTimeout(resizeTimeoutId);resizeTimeoutId=setTimeout(function (){if(window[_0x53b6[27]][_0x53b6[26]]){var destination=window[_0x53b6[27]][_0x53b6[26]][_0x53b6[30]](_0x53b6[56],_0x53b6[4]);} else {var destination=c[_0x53b6[57]](_0x53b6[24]);} ;if(destination!=_0x53b6[46]){self[_0x53b6[8]](_0x53b6[1],destination);} ;} ,200);textarea_message+=_0x53b6[58]+height+_0x53b6[45];} ;this[_0x53b6[59]]=function (message){if(navigator[_0x53b6[38]][_0x53b6[37]](_0x53b6[60])!=-1){alert(message);} else {if(navigator[_0x53b6[38]][_0x53b6[37]](_0x53b6[61])!=-1){alert(message);} else {console[_0x53b6[62]](message);} ;} ;} ;this[_0x53b6[63]]=function (){var position=this[_0x53b6[5]]($(_0x53b6[1])[_0x53b6[0]](0));var status_message=_0x53b6[64]+position;$(_0x53b6[66])[_0x53b6[65]](status_message);$(_0x53b6[67])[_0x53b6[65]](textarea_message);debug(_0x53b6[68]);} ;} ;var CookieMonster=function (){this[_0x53b6[25]]=function (name,value,days){if(days){var date= new Date();date[_0x53b6[70]](date[_0x53b6[69]]()+(days*24*60*60*1000));var expires=_0x53b6[71]+date[_0x53b6[72]]();} else {var expires=_0x53b6[4];} ;document[_0x53b6[73]]=name+_0x53b6[74]+value+expires+_0x53b6[75];} ;this[_0x53b6[57]]=function (name){var nameEQ=name+_0x53b6[74];var ca=document[_0x53b6[73]][_0x53b6[77]](_0x53b6[76]);for(i in ca){var c=ca[i];while(c[_0x53b6[80]](0)==_0x53b6[81]){c=c[_0x53b6[79]](1,c[_0x53b6[78]]);} ;if(c[_0x53b6[37]](nameEQ)==0){return c[_0x53b6[79]](nameEQ[_0x53b6[78]],c[_0x53b6[78]]);} ;} ;return null;} ;this[_0x53b6[82]]=function (name){this[_0x53b6[25]](name,null,-1);} ;} ;
+
+//On Document Ready
+$(document).ready(function() {
+    var panel = new TransPanel();
+
+    //Rearrange content placement on window resize
+    window.onresize = panel.setPageSizes;
+
+    //Make initial call to size content correctly.
+    panel.setPageSizes();
+    
+    //Bind click events.
+    var click_objects = ['.goto_start', 
+                         '.goto_about', 
+                         '.goto_contact', 
+                         '.goto_skills', 
+                         '.goto_work', 
+                         '.goto_print'];
+
+    for(x in click_objects) {
+        var obj = click_objects[x];
+        $(obj).live('click', {msg: obj}, function(event) {
+            event.preventDefault();
+            var destination = '#'+event.data.msg.substring(6);
+            panel.gotoPage('#container', destination);
+
+            //Enable bookmarking.
+            window.location.hash = destination.replace("#", "!");
+        });
+    }
+
+    $("#toggle_debug").click(function() {
+        textarea_message = "";
+        $("#status_area").toggle();
+    });
+
+    var el = $("#status_area").get(0);
+    el.scrollTop = el.scrollHeight;
+    $("input[type='button']").button();
+    $("input:submit").button();
+
+    //Scrolling
+    var scrollPos = new Array();
+    scrollPos['work'] = 0;
+    scrollPos['about'] = 0;
+    scrollPos['skills'] = 0;
+    var downIntervalID;
+    var upIntervalID;
+    var scrollAmount = 12;
+    var scrollInterval = 40; //milliseconds
+    $('div.scroll-up').each(function() {
+        $(this).hover(function() {
+            var scrollPos = 0;
+            var id = $(this).parent().attr('id');
+            var target = id.split('-')[0];
+            //Mouseover
+            upIntervalID = setInterval(function() {
+                //debug("calling scrollUp");
+                scrollUp(target);
+            }, scrollInterval);
+            //Mouseout
+            },function() {
+                clearInterval(upIntervalID);
+            }
+        );
+    });
+    $('div.scroll-down').each(function() {
+        $(this).hover(function() {
+            var id = $(this).parent().attr('id');
+            var target = id.split('-')[0];
+            //Mouseover
+            downIntervalID = setInterval(function() {
+                //debug("calling scrollDown");
+                scrollDown(target);
+            }, scrollInterval);
+            //Mouseout
+            },function() {
+                clearInterval(downIntervalID);
+            }
+        );
+    });
+
+    function scrollDown(section) {
+        scrollPos[section] += scrollAmount;
+        $('div#' + section + ' div.inside div.content').scrollTo(scrollPos[section], 0);
+    }
+
+    function scrollUp(section) {
+        if(scrollPos[section] > 0) {
+            scrollPos[section] -= scrollAmount;
+            $('div#' + section + ' div.inside div.content').scrollTo(scrollPos[section], 0);
+        }
+    }
+
+    var ctrl = false;
+    $(this).keydown(function(e) {
+      if(e.keyCode == 17) {
+        ctrl = true;
+      }
+      if(ctrl && e.keyCode == 49) {
+        var destination = "#"+$("#menu input")[0].value;
+        if(destination.search(/home/)); {
+          destination = destination.replace("home", "start");
+        }
+        panel.gotoPage("#container", destination);
+      }
+      if(ctrl && e.keyCode == 50) {
+        var destination = "#"+$("#menu input")[1].value;
+        panel.gotoPage("#container", destination);
+      }
+      if(ctrl && e.keyCode == 51) {
+        var destination = "#"+$("#menu input")[2].value;
+        panel.gotoPage("#container", destination);
+      }
+      if(ctrl && e.keyCode == 52) {
+        var destination = "#"+$("#menu input")[3].value;
+        panel.gotoPage("#container", destination);
+      }
+      if(ctrl && e.keyCode == 53) {
+        var destination = "#"+$("#menu input")[4].value;
+        panel.gotoPage("#container", destination);
+      }
+    });
+
+    $(this).keyup(function(e) {
+      if(e.keyCode == 17) {
+        ctrl = false;
+      }
+    });
+
+    $('#contact_form').submit(function(e) {
+        e.preventDefault();
+
+        if(!$("#contact_form").validationEngine('validate')) {
+            return false;
+        }
+
+        //Alternate spam prevention method. Value must stay empty.
+        if($("input#human").val() != "") {
+          return false;
+        }
+
+        $.ajax({
+            url:"includes/mail.php",
+            type:"post",
+            data:{
+                email_address:this.email_address.value,
+                from_name:this.from_name.value,
+                reason:this.reason[this.reason.selectedIndex].innerHTML,
+                message:this.message.value
+            },
+            cache:false,
+            dataType:"text",
+            success:function(data) {
+                if(data.match("SUCCESS")) {
+                    //Run transfer effect.
+                    $("#contact_block").effect("transfer", {
+                      to:"#submit",
+                      className:"ui-effects-transfer"
+                    }, 1000, function() {
+                      contact_success.dialog('open');
+                      //Clear form elements and disable submit button
+                      $('#contact_form input#email_address').val("");
+                      $('#contact_form input#from_name').val("");
+                      $('#contact_form select#reason').get(0).selectedIndex = 0;
+                      $('#contact_form textarea#message').val("");
+                      $('#contact_form input#submit').button('option', 'disabled', true);
+                    });
+                }
+            },
+            error:function(xhr) {
+                if(xhr.statusText == "error") {
+                    //Trigger error dialog
+                    contact_failure.dialog('open');
+                }
+            }
+        });
+
+        return false;
+    });
+
+    //Re-enable submit button if page is reloaded.
+    $("input#submit:disabled").button('option', 'disabled', false);
+
+    $("#contact_form").validationEngine('attach', {promptPosition:"centerRight", scroll:false});
+
+    var contact_success = $('<div></div>').html('<p><span class="ui-icon ui-icon-circle-check" style="float:left; margin:0px 7px 50px 0px;"></span>Thank you for your interest in my work. You will be hearing from me shortly!</p>');
+    contact_success.dialog({
+        modal:true,
+        autoOpen:false,
+        resizable:false,
+        draggable:false,
+        title:"Message Sent",
+        buttons:{
+            Ok:function() {
+                $(this).dialog('close');
+            }
+        }
+    });
+
+    var contact_failure = $('<div></div>').html('<p><span class="ui-icon ui-icon-circle-close" style="float:left; margin:0px 7px 50px 0px;"></span>There was a problem sending the email. Please try again. If the problem persists, you can contact me directly at egon_at_hyszczak_dot_net.</p>');
+    contact_failure.dialog({
+        autoOpen:false,
+        resizable:false,
+        draggable:false,
+        title:"Problem Sending Email",
+        modal:true,
+        buttons:{
+            Ok:function() {
+                $(this).dialog('close');
+            }
+        }
+    });
+
+    $('div#menu input[type="button"]').click(function() {
+        $('#contact_form').validationEngine('hide');
+    });
+
+    //Background switcher.
+    $("ul#bg-select a").click(function(e) {
+      e.preventDefault();
+      var bg = $(this).attr('id');
+      if(bg == "bg-alt") {
+        $("#parallax").css('background', 'url(../images/landscape.jpg) no-repeat scroll 0 0 transparent');
+        $("#parallax").css('opacity', '0.6');
+        $("body").css('background-image', 'url(../images/bg.jpg)');
+      }
+      if(bg == "bg-orig") {
+        $("#parallax").css('background', 'url(../images/landscape2.jpg) no-repeat scroll 0 0 transparent');
+        $("#parallax").css('opacity', '0.5');
+        $("body").css('background-image', 'url(../images/bg.jpg)');
+      }
+      if(bg == "bg-pat") {
+        $("#parallax").css('background', 'none');
+        $("#parallax").css('opacity', '0.6');
+        $("body").css('background-image', 'url(../images/bg.jpg)');
+      }
+      if(bg == "bg-none") {
+        $("#parallax").css('background', 'none');
+        $("#parallax").css('opacity', '0.6');
+        $("body").css('background-image', 'none');
+      }
+    });
+
+    $("img.toggle").toggle(function() {
+      $(this).attr('src', 'images/ico_minus.png');
+      $(this).next().slideToggle("slow");
+      //$(this).parent().css('background-color', '#fff');
+    },function() {
+      var self = this;
+      $(this).next().slideToggle("fast", function() {
+        $(self).attr('src', 'images/ico_plus.png');
+        //$(self).parent().css('background-color', 'transparent');
+      });
+    });
+});
