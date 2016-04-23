@@ -2,6 +2,8 @@
  * Egon Hyszczak 5/1/2010
  */
 
+@import url(https://fonts.googleapis.com/css?family=Medula+One|Roboto:900|Roboto+Condensed:300);
+
 html {
     overflow: hidden;
 }
@@ -11,7 +13,8 @@ body {
     padding: 0;
     background-color: #000;
     background-image: url(../images/bg.jpg);
-    font-family:"Bitstream Vera Sans", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial, sans-serif;
+    font-family:'Roboto Condensed', "Bitstream Vera Sans", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial, sans-serif;
+    font-weight:300;
     font-size:10px;
     color:white;
 }
@@ -38,7 +41,6 @@ img {
     position: absolute;
     width: 1920px;
     height: 1200px;
-    xbackground:transparent url(../images/shader.png) repeat 0 0;
 }
 
 .stripe_h {
@@ -47,7 +49,7 @@ img {
 }
 .stripe_v {
     width:111px;
-    height:187px;
+    height:176px;
     -moz-border-radius:4px;
     margin:2px;
     float:left;
@@ -66,7 +68,7 @@ img {
     background-position:bottom right;
 }
 #start .stripe {
-    background:#61e353 url(../images/shader.png) repeat 0 0;
+    background:#61e353;
 }
 
 #about {
@@ -117,9 +119,20 @@ img {
     height:100%;
     overflow:hidden;
 }
-	
+
+code {
+  font-family:monospace;
+  border:1px dashed white;
+  display:inline-block;
+  padding:0px 4px;
+  background:black;
+}
+
 .inside h1 {
-    font-family:"Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial;
+    font-family:'Roboto', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:0.3em;
     font-size:16px;
     font-weight:normal;
     color:#FFF;
@@ -129,7 +142,7 @@ img {
 }
 
 .inside h2 {
-    font-family:"Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial;
+    xfont-family:"Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial;
     font-size:12px;
     font-weight:normal;
     color:#FFF;
@@ -139,11 +152,11 @@ img {
 }
 
 .inside p {
-    font-family:"Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial;
+    xfont-family:"Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial;
     font-size:12px;
     color:#FFF;
-    text-align:justify;
-    line-height:23px;
+    text-align:left;
+    line-height:1.9em;
     padding-bottom:10px;
     text-shadow:0px 0px 3px #000;
 }
@@ -155,7 +168,7 @@ img {
     list-style:none outside none;
     font-size:12px;
     display:block;
-    padding:2px 10px;
+    padding:4px 10px;
     border-bottom:1px solid #ccc;
 }
 .inside ul#skill_list li ul {
@@ -183,7 +196,7 @@ img {
     list-style-type:none;
     font-size:12px;
     display:block;
-    padding:2px 10px;
+    padding:4px 10px;
     border-bottom:1px solid#ccc;
     width:auto;
 }
@@ -310,7 +323,7 @@ div#menu {
     top:8px;
     left:8px;
     width:86px;
-    height:162px;
+    height:151px;
     border:3px double #a0e1ff;
     padding:12px;
     text-align:center;
@@ -319,6 +332,8 @@ div#menu {
 div#menu input {
     width:84px;
     margin:2px 0;
+    font-family:'Roboto Condensed';
+    font-weight:300;
     font-size:12px;
 }
 div#logos {
@@ -370,7 +385,7 @@ div#parallax {
     /*background: transparent url(../images/landscape.jpg) no-repeat 0 0;*/
     background: transparent url(../images/landscape2.jpg) no-repeat 0 0;
     z-index:100;
-    opacity:0.6;
+    opacity:0.4;
     display:none;
 }
 div#about-scroller, div#animation-scroller, div#skills-scroller {
@@ -439,7 +454,7 @@ input {
     font-family:"Bitstream Vera Sans", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial, sans-serif;
     font-size:14px;
     line-height:1.2em;
-    width:408px;
+    width:386px;
 }
 
 #contact_form select#reason option {
@@ -452,8 +467,10 @@ input {
 }
 
 #contact_form input#submit {
+    font-family:'Roboto Condensed';
+    font-weight:300;
     position:relative;
-    left:224px;
+    left:264px;
 }
 
 #contact_form input[type="text"]:focus, #contact_form select#reason:focus, #contact_form textarea:focus {

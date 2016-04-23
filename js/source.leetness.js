@@ -222,7 +222,7 @@ $(document).ready(function() {
 
     //Make initial call to size content correctly.
     panel.setPageSizes();
-    
+
     //Bind click events.
     var click_objects = ['.goto_start', 
                          '.goto_about', 
@@ -356,7 +356,7 @@ $(document).ready(function() {
 
         $.ajax({
             url:"includes/mail.php",
-            type:"post",
+            type:"get",
             data:{
                 email_address:this.email_address.value,
                 from_name:this.from_name.value,
@@ -380,6 +380,9 @@ $(document).ready(function() {
                       $('#contact_form textarea#message').val("");
                       $('#contact_form input#submit').button('option', 'disabled', true);
                     });
+                } else if(data.match("FAILURE")) {
+                    //Trigger error dialog
+                    contact_failure.dialog('open');
                 }
             },
             error:function(xhr) {
