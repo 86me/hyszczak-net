@@ -293,83 +293,86 @@ a:hover, a:active {
 input[name='status'] {
     opacity:0.6;
     border:1px solid white;
+    z-index:inherit;
 }
 textarea[name='status_area'] {
     opacity:0.6;
     border:1px solid white;
     display:none;
+    z-index:inherit;
 }
 div#debug {
    position:fixed;
-   top:24px;
+   top:64px;
    right:18px;
-   z-index:1000;
-   display:none;
+   display:inline-block;
+   z-index:1001;
 }
 div#current_position {
-    position:fixed;
-    top:2px;
-    right:2px;
-    z-index:1000;
-    display:none;
+  position:fixed;
+  top:2px;
+  right:2px;
+  z-index:1000;
+  display:none;
 }
 input#toggle_debug {
-    float:right;
-    margin:2px;
+  float:right;
+  margin:2px;
+  z-index:1001;
 }
 div#menu {
-    -moz-border-radius:4px;
-    position:absolute;
-    top:8px;
-    left:8px;
-    width:86px;
-    height:151px;
-    border:3px double #a0e1ff;
-    padding:12px;
-    text-align:center;
-    z-index:1000;
+  -moz-border-radius:4px;
+  position:absolute;
+  top:8px;
+  left:8px;
+  width:86px;
+  height:151px;
+  border:3px double #a0e1ff;
+  padding:12px;
+  text-align:center;
+  z-index:1000;
 }
 div#menu input {
-    width:84px;
-    margin:2px 0;
-    font-family:'Roboto Condensed';
-    font-weight:300;
-    font-size:12px;
+  width:84px;
+  margin:2px 0;
+  font-family:'Roboto Condensed';
+  font-weight:300;
+  font-size:12px;
 }
 div#logos {
-    float:right;
-    position:fixed;
-    bottom:5px;
-    right:5px;
-    z-index:1000;
-    background:transparent;
+  float:right;
+  position:fixed;
+  bottom:5px;
+  right:5px;
+  z-index:1000;
+  background:transparent;
 }
 div#logos a {
-    background:transparent;
+  background:transparent;
 }
 div#copyright {
-    float:left;
-    position:fixed;
-    bottom:5px;
-    left:5px;
-    z-index:1000;
-    background:transparent;
+  float:left;
+  position:fixed;
+  bottom:5px;
+  left:5px;
+  z-index:1000;
+  background:transparent;
 }
 
 div#copyright p {
-    padding:0px;
-    margin:0px;
-    text-shadow:1px 1px 2px #000;
+  padding:0px;
+  margin:0px;
+  text-shadow:1px 1px 2px #000;
 }
 
 div#top-right {
-    float:right;
-    position:fixed;
-    top:0px;
-    right:5px;
-    z-index:1000;
-    background:transparent;
-    text-shadow:1px 1px 2px #000;
+  float:right;
+  position:fixed;
+  top:0px;
+  right:5px;
+  z-index:1000;
+  background:transparent;
+  text-shadow:1px 1px 2px #000;
 }
 
 div#top-right ul li {
@@ -388,32 +391,41 @@ div#parallax {
     opacity:0.4;
     display:none;
 }
-div#about-scroller, div#animation-scroller, div#skills-scroller {
-    background:transparent;
-    width:80px;
-    height:80%;
-    position:relative;
-    top:20%;
-    right:20%;
-    float:right;
+
+div#about-scroller, div#work-scroller, div#skills-scroller {
+    background: transparent;
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 200px;
+    left: 37px;
+    float: left;
+    z-index: 9999;
+    /* border: 1px solid lime; */
 }
-div#about-scroller div.scroll-up, div#animation-scroller div.scroll-up, div#skills-scroller div.scroll-up {
-    position:relative;
-    top:0px;
-    left:0px;
-    cursor:pointer;
-    height:30px;
-    text-align:center;
-    opacity:1.0;
+
+div#about-scroller div.scroll-up, div#work-scroller div.scroll-up, div#skills-scroller div.scroll-up {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    height: auto;
+    text-align: center;
+    opacity: 1.0;
+    z-index: inherit;
+    float: left;
 }
-div#about-scroller div.scroll-down, div#animation-scroller div.scroll-down, div#skills-scroller div.scroll-down {
-    position:relative;
-    top:200px;
-    left:0px;
-    cursor:pointer;
-    height:30px;
-    text-align:center;
-    opacity:1.0;
+
+div#about-scroller div.scroll-down, div#work-scroller div.scroll-down, div#skills-scroller div.scroll-down {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    height: auto;
+    text-align: center;
+    opacity: 1.0;
+    z-index: inherit;
+    float: left;
 }
 
 ul li {

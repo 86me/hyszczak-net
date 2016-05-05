@@ -88,6 +88,7 @@ var TransPanel = function() {
           var tween_object = parallax.v;
         }
         if(tween_object != undefined) {
+          this.trackPosition();
           tween_object.onMotionFinished = function(event) {
             //console.log("finished moving to "+destination);
           }
@@ -95,6 +96,7 @@ var TransPanel = function() {
             //console.log("started moving to "+destination);
           }
         }
+
 
         content_tween.start();
         parallax.start();
@@ -118,7 +120,7 @@ var TransPanel = function() {
         };
 
         dimensions = this.getBrowserDimensions();
-        tPos = 0; //Top position
+        tPos = 0; //Top pos//ition
         lPos = 0; //Left position
         padding = 65;
         columns = 3;
@@ -162,7 +164,7 @@ var TransPanel = function() {
     this.debug = function(message) {
         if(navigator.userAgent.indexOf("Microsoft") != -1) {
             alert(message);
-        } else if(navigator.userAgent.indexOf("Chrome") != -1) {
+        } else if(navigator.userAgent.indexOf("Opera") != -1) {
             alert(message);
         } else {
             console.log(message);
@@ -172,9 +174,10 @@ var TransPanel = function() {
     this.trackPosition = function() {
         var position = this.getPos($("#container").get(0));
         var status_message = "container position: "+position;
+        var status_area = $('#status_area').get(0);
         $('input[name="status"]').val(status_message);
         $('textarea[name="status_area"]').val(textarea_message);
-        debug("called trackPosition");
+        status_area.scrollTop = status_area.scrollHeight;
     };
 };
 
@@ -248,8 +251,6 @@ $(document).ready(function() {
         $("#status_area").toggle();
     });
 
-    var el = $("#status_area").get(0);
-    el.scrollTop = el.scrollHeight;
     $("input[type='button']").button();
     $("input:submit").button();
 
@@ -269,7 +270,7 @@ $(document).ready(function() {
             var target = id.split('-')[0];
             //Mouseover
             upIntervalID = setInterval(function() {
-                //debug("calling scrollUp");
+                //panel.debug("calling scrollUp: [id="+id+"] [target="+target+"]");
                 scrollUp(target);
             }, scrollInterval);
             //Mouseout
@@ -284,7 +285,7 @@ $(document).ready(function() {
             var target = id.split('-')[0];
             //Mouseover
             downIntervalID = setInterval(function() {
-                //debug("calling scrollDown");
+                //panel.debug("calling scrollDown: [id="+id+"] [target="+target+"]");
                 scrollDown(target);
             }, scrollInterval);
             //Mouseout
@@ -295,8 +296,9 @@ $(document).ready(function() {
     });
 
     function scrollDown(section) {
+        var pane = $('div#' + section + ' div.inside div.content');
         scrollPos[section] += scrollAmount;
-        $('div#' + section + ' div.inside div.content').scrollTo(scrollPos[section], 0);
+        pane.scrollTo(scrollPos[section], 0);
     }
 
     function scrollUp(section) {
@@ -438,7 +440,7 @@ $(document).ready(function() {
       e.preventDefault();
       var bg = $(this).attr('id');
       if(bg == "bg-alt") {
-        $("#parallax").css('background', 'url(../images/landscape.jpg) no-repeat scroll 0 0 transparent');
+        $("#parallax").css('background', 'url(../images/rock-of-ages.jpg) no-repeat scroll 0 0 transparent');
         $("#parallax").css('opacity', '0.6');
         $("body").css('background-image', 'url(../images/bg.jpg)');
       }
